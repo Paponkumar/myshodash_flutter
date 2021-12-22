@@ -3,7 +3,9 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:myshodash/profile.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'AboutUs.dart';
 import 'Listproduct.dart';
 
 class MainDrawer extends StatefulWidget {
@@ -83,7 +85,7 @@ class _MainDrawerState extends State<MainDrawer> {
                   child: Icon(
                     Icons.account_box,
                     size: 50,
-                    color: Colors.lightGreenAccent,
+                    color: Colors.indigo,
                   )),
               Container(
                   alignment: Alignment.topLeft,
@@ -106,7 +108,7 @@ class _MainDrawerState extends State<MainDrawer> {
                 title: Text('Home', style: TextStyle(color: Colors.cyan)),
                 leading: Icon(
                   Icons.home,
-                  color: Colors.lightGreenAccent,
+                  color: Colors.indigo,
                 ),
                 onTap: () {
                   Fluttertoast.showToast(
@@ -121,10 +123,11 @@ class _MainDrawerState extends State<MainDrawer> {
               child: ListTile(
                 title: Text('Profile', style: TextStyle(color: Colors.cyan)),
                 leading: Icon(
-                  Icons.pages_outlined,
-                  color: Colors.lightGreenAccent,
+                  Icons.account_circle,
+                  color: Colors.indigo,
                 ),
                 onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => Profile_info()),);
                   Fluttertoast.showToast(
                       msg: 'Profile', toastLength: Toast.LENGTH_LONG);
                 },
@@ -137,8 +140,8 @@ class _MainDrawerState extends State<MainDrawer> {
               child: ListTile(
                 title: Text('Oder_List', style: TextStyle(color: Colors.cyan)),
                 leading: Icon(
-                  Icons.favorite_border_outlined,
-                  color: Colors.lightGreenAccent,
+                  Icons.add,
+                  color: Colors.indigo,
                 ),
                 onTap: () {
                   Fluttertoast.showToast(
@@ -153,14 +156,31 @@ class _MainDrawerState extends State<MainDrawer> {
               child: ListTile(
                 title: Text('Product_List', style: TextStyle(color: Colors.cyan)),
                 leading: Icon(
-                  Icons.favorite_border_outlined,
-                  color: Colors.lightGreenAccent,
+                  Icons.add_shopping_cart_sharp,
+                  color: Colors.indigo,
                 ),
                 onTap: () {
 
                   Navigator.push(context, MaterialPageRoute(builder: (context) =>Listpro()));
                   Fluttertoast.showToast(
                       msg: 'Product_List', toastLength: Toast.LENGTH_LONG);
+                },
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(
+              child: ListTile(
+                title: Text('About Us', style: TextStyle(color: Colors.cyan)),
+                leading: Icon(
+                  Icons.description,
+                  color: Colors.indigo,
+                ),
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) =>AboutUs()));
+                  Fluttertoast.showToast(
+                      msg: 'About Us', toastLength: Toast.LENGTH_LONG);
                 },
               ),
             ),

@@ -46,10 +46,9 @@ class _Profile_infoState extends State<Profile_info> {
           toolbarHeight: 70,
           actions: [
             IconButton(onPressed: (){
-              Navigator.push(context, MaterialPageRoute(builder: (context) => Home()),);
             }, icon: Icon(Icons.view_headline_rounded), )
           ],
-          title: Text("Custom App Bar"),
+          title: Text("Profile info"),
           centerTitle: true,
           flexibleSpace: Container(
             decoration: BoxDecoration(

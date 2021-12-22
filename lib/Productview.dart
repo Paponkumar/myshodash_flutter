@@ -21,10 +21,9 @@ class _ViewState extends State<View> {
         backgroundColor: Colors.black54,
         appBar: AppBar(
           backgroundColor: Colors.black54,
-          title: Center(
-            child: Text(
-              'Details',
-            ),
+          centerTitle: true,
+          title: Text(
+            'Product Oder Page',
           ),
           iconTheme: IconThemeData(color: Colors.yellow),
         ),

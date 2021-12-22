@@ -28,7 +28,7 @@ class _ListproState extends State<Listpro> {
         "https://miro.medium.com/max/800/0*XMPs9rjc_cwvuX5q.jpg"),
     productlistmodel(
         2,
-        'product 2',
+        'Rosh Irani',
         'product 1desc',
         100,
         10,
@@ -39,18 +39,19 @@ class _ListproState extends State<Listpro> {
         "https://image.shutterstock.com/image-photo/popular-bangladeshi-sweetmeats-over-white-260nw-512012944.jpg"),
     productlistmodel(
         3,
-        'product 3',
+        ' রসগোল্লা',
         'product 1desc',
         100,
         10,
-        'Descreption',
+        'রসগোল্লা সাদা রঙের এক প্রকার ছানার মিষ্টি। এটি চিনি বা গুড় দিয়ে তৈরি হয়। সবার কাছেই রসগোল্লা একটি জনপ্রিয় মিষ্টি। ছানা (তার মধ্যে অনেক সময় সুজির পুর দেওয়া হয়) পাকিয়ে গরম রসে ডুবিয়ে এটি প্রস্তুত করা হয়। রসগোল্লা নিয়ে পশ্চিমবঙ্গ ও ওড়িশার বিরোধ বহু দিনের। ২০১৭ সালের নভেম্বর মাসে পশ্চিমবঙ্গ সরকার রসগোল্লার জিআই ট্যাগ লাভ করে।[২] ফলে রসগোল্লার উৎপত্তি যে বাংলায় তা প্রতিষ্ঠা পায়।'
+            'পশ্চিমবঙ্গ সরকারের কর্মকর্তারা বলছেন যে তারা শুধু ভৌগোলিক সূচক বা ভৌগোলিক ইঙ্গিত (জিআই) ট্যাগের জন্য অনুরোধ করেছিলেন, যা স্থানীয় রসগোল্লা বাংলার রসগোল্লা (বেঙ্গল রসগোল্লা) নামেও পরিচিত করে [৩] এবং বলেছিল যে "উড়িষ্যার সাথে কোন দ্বন্দ্ব নেই। আমাদের রসগোল্লা পরিচয় রক্ষা করার জন্য আমরা যা চাই তা আমাদের রঙিন, জমিন, স্বাদ, রসের সামগ্রী এবং উৎপাদন পদ্ধতির উভয় দিক থেকে ভিন্ন।',
         20,
         'kg',
         5,
-        "https://sgp1.digitaloceanspaces.com/cosmosgroup-dc/news/qqwYxlIFK9HiYbgQj1uWjvT11UgYs3IsCj5gD3dc.jpeg"),
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Bengali_Rasgula.jpg/1920px-Bengali_Rasgula.jpg"),
     productlistmodel(
         4,
-        'product 4',
+        't 4',
         'product 1desc',
         100,
         10,
@@ -153,7 +154,8 @@ class _ListproState extends State<Listpro> {
                 child: ListTile(
               title: Text('${productlist[i].title}'),
               leading: Image.network(productlist[i].imageUrl),
-              trailing: Icon(Icons.account_tree_outlined),
+              trailing: Icon(Icons.add),
+
             ));
           }),
     );

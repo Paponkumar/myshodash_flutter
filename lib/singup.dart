@@ -21,9 +21,11 @@ class _signupState extends State<signup> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor:Colors.black12 ,
       appBar: AppBar(
+        centerTitle: true,
         elevation: 6.0,
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.black12,
         shape: ContinuousRectangleBorder(
           borderRadius: const BorderRadius.only(
             topLeft: Radius.circular(90.0),
@@ -42,12 +44,13 @@ class _signupState extends State<signup> {
                 child: TextField(
                   keyboardType: TextInputType.phone,
                   controller: usernameController,
+                  cursorColor: Colors.pink,
                   decoration: InputDecoration(
                       border: OutlineInputBorder(),
                       labelText: 'User Name',
                       hintText: 'Enter your Name',
                       icon: Icon(
-                        Icons.account_box_outlined,
+                        Icons.account_box_outlined,color: Colors.indigo,
                         size: 50,
                       )),
                 ),
@@ -55,14 +58,17 @@ class _signupState extends State<signup> {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: TextField(
+
                   keyboardType: TextInputType.phone,
                   controller: passController,
+                  cursorColor: Colors.pink,
                   decoration: InputDecoration(
                       border: OutlineInputBorder(),
+
                       labelText: 'User pass',
                       hintText: 'Enter your pass',
                       icon: Icon(
-                        Icons.account_box_outlined,
+                        Icons.account_box_outlined,color: Colors.indigo,
                         size: 50,
                       )),
                 ),
@@ -75,7 +81,7 @@ class _signupState extends State<signup> {
                         getDate();
                       },
                       icon: Icon(
-                        Icons.date_range_outlined,
+                        Icons.date_range_outlined,color: Colors.indigo,
                         size: 50,
                       )),
                   SizedBox(
@@ -85,14 +91,22 @@ class _signupState extends State<signup> {
                     padding: const EdgeInsets.all(8.0),
                     child: Container(
                         height: 50,
-                        width: 280,
+                        width: 330,
                         decoration: BoxDecoration(
-                            border:
-                            Border.all(width: 1, color: Color(0xFF9D9898))),
+                          border:
+                          Border.all(width: 1, color: Colors.pink),
+                        ),
                         child: Center(
                             child: _dateTime == null
                                 ? Flexible(child: TextField(
-                              keyboardType: TextInputType.datetime,
+                              decoration: InputDecoration(
+                                labelText: 'Date',
+                                hintText: 'Enter your Date',
+                                border: OutlineInputBorder(
+                                  borderSide: BorderSide.none,
+                                ),
+                              ),
+                              keyboardType: TextInputType.datetime,cursorColor: Colors.pink,
                             ))
                                 : Text(
                                 'Date : ${_dateTime!.day}-${_dateTime!.month}-${_dateTime!.year}'))),

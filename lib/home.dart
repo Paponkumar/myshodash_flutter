@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_carousel_slider/carousel_slider.dart';
 import 'package:flutter_carousel_slider/carousel_slider_indicators.dart';
 import 'package:flutter_carousel_slider/carousel_slider_transforms.dart';
-import 'package:fluttertoast/fluttertoast.dart';
 import 'package:myshodash/Productlistmodel.dart';
 import 'Productview.dart';
 import 'dashbord.dart';
@@ -24,6 +23,7 @@ class _HomeState extends State<Home> {
     "https://sgp1.digitaloceanspaces.com/cosmosgroup-dc/news/2BfcCqZKjA516scJNDvaaCYoyJnHs6d2myWWK9wM.jpeg",
     "https://sgp1.digitaloceanspaces.com/cosmosgroup-dc/news/qqwYxlIFK9HiYbgQj1uWjvT11UgYs3IsCj5gD3dc.jpeg",
     "https://sgp1.digitaloceanspaces.com/cosmosgroup-dc/news/5EvQnXiG36ajqvYCLij0B6aGB0CAtNvJqNMvgnGG.jpeg",
+    "https://upload.wikimedia.org/wikipedia/commons/c/c7/Jalebi.jpg",
   ];
 
   /* All product list*/
@@ -41,7 +41,7 @@ class _HomeState extends State<Home> {
         "https://miro.medium.com/max/800/0*XMPs9rjc_cwvuX5q.jpg"),
     productlistmodel(
         2,
-        'product 2',
+        'Rosh Irani',
         'product 1desc',
         100,
         10,
@@ -52,38 +52,41 @@ class _HomeState extends State<Home> {
         "https://image.shutterstock.com/image-photo/popular-bangladeshi-sweetmeats-over-white-260nw-512012944.jpg"),
     productlistmodel(
         3,
-        'product 3',
+        'রসগোল্লা',
         'product 1desc',
         100,
         10,
-        'Descreption',
+        'রসগোল্লা সাদা রঙের এক প্রকার ছানার মিষ্টি। এটি চিনি বা গুড় দিয়ে তৈরি হয়। সবার কাছেই রসগোল্লা একটি জনপ্রিয় মিষ্টি। ছানা (তার মধ্যে অনেক সময় সুজির পুর দেওয়া হয়) পাকিয়ে গরম রসে ডুবিয়ে এটি প্রস্তুত করা হয়। রসগোল্লা নিয়ে পশ্চিমবঙ্গ ও ওড়িশার বিরোধ বহু দিনের। ২০১৭ সালের নভেম্বর মাসে পশ্চিমবঙ্গ সরকার রসগোল্লার জিআই ট্যাগ লাভ করে।[২] ফলে রসগোল্লার উৎপত্তি যে বাংলায় তা প্রতিষ্ঠা পায়।'
+            'পশ্চিমবঙ্গ সরকারের কর্মকর্তারা বলছেন যে তারা শুধু ভৌগোলিক সূচক বা ভৌগোলিক ইঙ্গিত (জিআই) ট্যাগের জন্য অনুরোধ করেছিলেন, যা স্থানীয় রসগোল্লা বাংলার রসগোল্লা (বেঙ্গল রসগোল্লা) নামেও পরিচিত করে [৩] এবং বলেছিল যে "উড়িষ্যার সাথে কোন দ্বন্দ্ব নেই। আমাদের রসগোল্লা পরিচয় রক্ষা করার জন্য আমরা যা চাই তা আমাদের রঙিন, জমিন, স্বাদ, রসের সামগ্রী এবং উৎপাদন পদ্ধতির উভয় দিক থেকে ভিন্ন।',
         20,
         'kg',
         5,
-        "https://sgp1.digitaloceanspaces.com/cosmosgroup-dc/news/qqwYxlIFK9HiYbgQj1uWjvT11UgYs3IsCj5gD3dc.jpeg"),
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Bengali_Rasgula.jpg/1920px-Bengali_Rasgula.jpg"),
     productlistmodel(
         4,
-        'product 4',
+        'মিষ্টি দই',
         'product 1desc',
         100,
         10,
-        'Descreption',
+        'ROSH থেকে Doi.1 কেজি মিষ্টির দাম দেখানো হয়েছে। আমরা শীঘ্রই 2, 3, 4 … kgs এর পরিমাণ বাড়াব। রোশ শহরের নতুন মিষ্টির দোকান। '
+            'আমাদের গ্রাহকদের কি পাগল করে তোলে আপনি আমাদের ম্যানেজার মোঃ সানোয়ার হোসেনকে জিজ্ঞাসা করতে পারেন। রান্নাঘরে জাদু তৈরি করেন এমন ব্যক্তি?'
+            'এর জন্য কিছু বিশেষ ব্যক্তিগত কৌশল প্রয়োজন যা একজন ব্যক্তি সারাক্ষণ ধরে অর্জন করে। সবচেয়ে গুরুত্বপূর্ণ উপাদান যা একজনের থাকতে হবে তা হল আবেগ এবং কাজের প্রতি আসক্তি।',
         20,
         'kg',
         5,
         "https://roshbd.com/wp-content/uploads/2016/11/misti-doi.jpg"),
     productlistmodel(
         5,
-        'product 5',
+        'মতিচূর লাড্ডু',
         'product 1desc',
         100,
         10,
-        'Descreption',
+        'চূর অর্থ ভাঙ্গা বা চূর্ন-বিচূর্ন করা। অর্থাৎ, মতিচূর মানে মুক্তার ভাঙ্গা গুঁড়া। ছোট ছোট মুক্তা দানার মতো বোঁদে বানিয়ে সেগুলোকে একসাথে হাতে চেপে তৈরি হয় মতিচূরের লাড্ডু। আর এজন্যই এমন চমৎকার নামের উৎপত্তি।প্রধান উপকরণ: বেসন, চিনি, বাদাম, কিশমিশ, ঘি ইত্যা...',
         20,
         'kg',
         5,
-        "https://media.istockphoto.com/photos/indian-sweet-jalebi-picture-id666999634?k=20&m=666999634&s=170667a&w=0&h=ekFWP2OUchQ8tMCslvFYBTUPml9PioN1LPbjAn9xHUc="),
-    productlistmodel(6, 'product 6', 'product 1desc', 100, 10, 'Descreption',
+        "https://upload.wikimedia.org/wikipedia/commons/8/82/Motichur_Laddu_%282%29.jpg"),
+    productlistmodel(6, 'রসমালাই', 'product 1desc', 100, 10, 'রসমালাই দক্ষিণ এশিয়ার বাংলাদেশ, ভারত, পাকিস্তান, নেপাল এর একটি জনপ্রিয় মিষ্টি খাদ্য। ছোট ছোট আকারের রসগোল্লাকে চিনির সিরায় ভিজিয়ে তার উপর জ্বাল-দেওয়া ঘন মিষ্টি দুধ ঢেলে রসমালাই বানানো হয়। বাংলাই রসমালাইয়ের উৎপত্তি স্থল। বাংলাদেশের কুমিল্লার এবং ভারতের কলকাতার রসমালাই খুবই বিখ্যাত।',
         20, 'kg', 5, "https://miro.medium.com/max/1400/0*VBJ3eN-HdrvQt7Z0.jpg"),
     productlistmodel(
         7,
@@ -159,7 +162,6 @@ class _HomeState extends State<Home> {
       backgroundColor: Colors.blue,
       drawer: MainDrawer(),
       appBar: AppBar(
-        
         title: Center(
           child: Text(
             'Home',
@@ -247,38 +249,11 @@ class _HomeState extends State<Home> {
           ],
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: [
-          BottomNavigationBarItem(
-              label: 'Profile',
-              icon: Icon(Icons.people_rounded),
-              backgroundColor: Colors.red),
-          BottomNavigationBarItem(
-              label: 'Games',
-              icon: Icon(Icons.videogame_asset),
-              backgroundColor: Colors.black54),
-          BottomNavigationBarItem(
-              label: 'For you',
-              icon: Icon(Icons.favorite),
-              backgroundColor: Color(0xFF060266)),
-          BottomNavigationBarItem(
-              label: 'Offer',
-              icon: Icon(Icons.all_inclusive),
-              backgroundColor: Color(0xFF595F31)),
-        ],
-        backgroundColor: Colors.black26,
-        selectedItemColor: Colors.green,
-        unselectedItemColor: Colors.white70,
-        elevation: 25,
-        currentIndex: _selectNavPosiotion,
-        onTap: (int index) {
-          setState(() {
-            _selectNavPosiotion = index;
-          });
-          Fluttertoast.showToast(
-              msg: index.toString(), toastLength: Toast.LENGTH_LONG);
-        },
-      ),
+
+
+
+
+
     );
   }
 }

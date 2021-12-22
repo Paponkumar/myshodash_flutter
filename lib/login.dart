@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:myshodash/profile.dart';
 import 'package:myshodash/singup.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'Myhome.dart';
 import 'forget.dart';
+
 
 class login extends StatefulWidget {
   @override
@@ -122,7 +123,7 @@ class _loginState extends State<login> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => Profile_info()));
+                                builder: (context) => Myhome()));
                       } else {
                         Fluttertoast.showToast(
                             msg: 'Please give a valid ID and Pass',
@@ -171,7 +172,7 @@ class _loginState extends State<login> {
                       child: Text('Have an account? Sign up',
                           style: GoogleFonts.rubik(
                               textStyle: TextStyle(
-                                  color: Color(0xFF7DEE69), fontSize: 18))),
+                                  color: Color(0xFF223AD5), fontSize: 18))),
                     )),
               )
             ],
