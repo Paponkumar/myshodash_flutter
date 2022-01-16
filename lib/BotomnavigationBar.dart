@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:myshodash/AboutUs.dart';
 import 'package:myshodash/Listproduct.dart';
-import 'package:myshodash/home.dart';
-import 'package:myshodash/profile.dart';
+import 'package:myshodash/HomePage.dart';
+import 'package:myshodash/Profile.dart';
 
 class Myhome extends StatefulWidget {
 
@@ -15,7 +15,7 @@ class Myhome extends StatefulWidget {
 class _MyhomeState extends State<Myhome> {
   PageController pageController= PageController();
 
-  List<Widget> pages = [Home(),Listpro(),AboutUs(),Profile_info()];
+  List<Widget> pages = [Home(),AboutUs(),Profile_info(),Listpro()];
 
   int selectedIndex=0;
 
@@ -33,18 +33,19 @@ class _MyhomeState extends State<Myhome> {
               label: 'Home',
               icon: Icon(Icons.people_rounded),
               backgroundColor: Colors.red),
-          BottomNavigationBarItem(
-              label: 'List',
-              icon: Icon(Icons.videogame_asset),
-              backgroundColor: Colors.black54),
+
           BottomNavigationBarItem(
               label: 'About Us',
               icon: Icon(Icons.favorite),
-              backgroundColor: Color(0xFF060266)),
+              backgroundColor: Colors.red),
           BottomNavigationBarItem(
               label: 'Profile Info',
-              icon: Icon(Icons.all_inclusive),
-              backgroundColor: Color(0xFF595F31)),
+              icon: Icon(Icons.verified_user_outlined),
+              backgroundColor: Colors.red),
+          BottomNavigationBarItem(
+              label: 'List',
+              icon: Icon(Icons.list),
+              backgroundColor: Colors.red),
         ],
         backgroundColor: Colors.black26,
         selectedItemColor: Colors.green,

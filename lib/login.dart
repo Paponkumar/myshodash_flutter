@@ -3,7 +3,7 @@ import 'package:fluttertoast/fluttertoast.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:myshodash/singup.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'Myhome.dart';
+import 'BotomnavigationBar.dart';
 import 'forget.dart';
 
 
@@ -19,6 +19,9 @@ class _loginState extends State<login> {
   String user = '';
   String pass = '';
 
+  String superuser = 'admin';
+  String superpass = 'admin';
+
   @override
   void initState() {
     // TODO: implement initState
@@ -29,7 +32,14 @@ class _loginState extends State<login> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
+      body: Container(
+        height: MediaQuery.of(context).size.height,
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("images/WallpaperLogin.jpg"),
+            fit: BoxFit.cover
+          )
+        ),
         child: SingleChildScrollView(
           child: Column(
             children: [
@@ -54,20 +64,23 @@ class _loginState extends State<login> {
                 padding: const EdgeInsets.all(8.0),
                 child: TextField(
                   controller: usernameController,
+                  style: TextStyle(color: Color(0xFF223AD5)),
                   decoration: InputDecoration(
-                      fillColor: Colors.deepPurpleAccent,
+
+                      fillColor: Colors.white,
                       enabledBorder: OutlineInputBorder(
                         borderSide:
-                            const BorderSide(color: Colors.deepPurpleAccent, width: 2.0),
+                        const BorderSide(color: Colors.deepPurpleAccent, width: 2.0),
                         borderRadius: BorderRadius.circular(25.0),
                       ),
                       border: OutlineInputBorder(),
                       labelText: 'User Name',
                       hintText: 'Enter your Name',
+                      hintStyle: TextStyle(fontSize: 20.0, color: Colors.red),
                       icon: Icon(
                         Icons.account_box_outlined,
                         size: 30,
-                        color: Colors.indigoAccent,
+                        color: Colors.white,
                       )),
                 ),
               ),
@@ -75,20 +88,22 @@ class _loginState extends State<login> {
                 padding: const EdgeInsets.all(8.0),
                 child: TextField(
                   controller: passController,
+                  style: TextStyle(color: Color(0xFF223AD5)),
                   obscureText: true,
                   decoration: InputDecoration(
                       enabledBorder: OutlineInputBorder(
                         borderSide:
-                            const BorderSide(color: Colors.deepPurpleAccent, width: 2.0),
+                        const BorderSide(color: Colors.deepPurpleAccent, width: 2.0),
                         borderRadius: BorderRadius.circular(25.0),
                       ),
                       border: OutlineInputBorder(),
                       labelText: 'Password',
                       hintText: 'Enter your Password',
+                      hintStyle: TextStyle(fontSize: 20.0, color: Colors.red),
                       icon: Icon(
                         Icons.lock,
                         size: 30,
-                        color: Colors.indigoAccent,
+                        color: Colors.white,
                       )),
                 ),
               ),
@@ -100,7 +115,7 @@ class _loginState extends State<login> {
                 width: 200,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
-                    color: Color(0xFF2443DF)),
+                    color: Colors.red),
                 child: TextButton(
                     onPressed: () {
                       if (usernameController.text.isEmpty &&
@@ -111,8 +126,9 @@ class _loginState extends State<login> {
                             gravity: ToastGravity.SNACKBAR,
                             backgroundColor: Colors.amberAccent,
                             textColor: Colors.pink);
-                      } else if (usernameController.text == user &&
-                          passController.text == pass) {
+                      }else if((usernameController.text == user &&
+                          passController.text == pass) || ((usernameController.text == superuser &&
+                          passController.text == superpass))) {
                         Fluttertoast.showToast(
                           msg: 'Login sucessful',
                           toastLength: Toast.LENGTH_LONG,
@@ -120,7 +136,7 @@ class _loginState extends State<login> {
                           backgroundColor: Colors.amberAccent,
                           textColor: Colors.pink,
                         );
-                        Navigator.push(
+                        Navigator.pushReplacement(
                             context,
                             MaterialPageRoute(
                                 builder: (context) => Myhome()));
@@ -154,12 +170,12 @@ class _loginState extends State<login> {
                         'Forgot Password',
                         style: GoogleFonts.rubik(
                             textStyle: TextStyle(
-                                color: Color(0xFF6194CB), fontSize: 20)),
+                                color: Color(0xFFFDFDFD), fontSize: 20)),
                       )),
                 ),
               ),
               SizedBox(
-                height: 30,
+                height: 20,
               ),
               Container(
                 child: Padding(
@@ -172,7 +188,7 @@ class _loginState extends State<login> {
                       child: Text('Have an account? Sign up',
                           style: GoogleFonts.rubik(
                               textStyle: TextStyle(
-                                  color: Color(0xFF223AD5), fontSize: 18))),
+                                  color: Color(0xFFFFFFFF), fontSize: 18))),
                     )),
               )
             ],

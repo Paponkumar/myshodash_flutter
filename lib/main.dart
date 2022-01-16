@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:myshodash/home.dart';
+import 'package:myshodash/HomePage.dart';
 import 'package:myshodash/login.dart';
 
 import 'splash.dart';

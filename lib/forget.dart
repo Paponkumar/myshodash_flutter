@@ -3,7 +3,7 @@ import 'package:fluttertoast/fluttertoast.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import 'dashbord.dart';
+import 'Drawer.dart';
 import 'login.dart';
 
 
@@ -36,19 +36,26 @@ class _ForgotState extends State<Forgot> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        elevation: 6.0,
-        backgroundColor: Colors.black,
-        shape: ContinuousRectangleBorder(
-          borderRadius: const BorderRadius.only(
-            topLeft: Radius.circular(90.0),
-            topRight: Radius.circular(90.0),
-            bottomLeft: Radius.elliptical(10, 8),
-
-          ),),
-        title: Text("Forgot Page"),
-      ),
+        appBar: AppBar(
+          brightness: Brightness.dark,
+          backgroundColor: Colors.transparent,
+          elevation: 0.0,
+          toolbarHeight: 70,
+          title: Text("Forgot"),
+          centerTitle: true,
+          flexibleSpace: Container(
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.only(bottomLeft: Radius.circular(20),bottomRight: Radius.circular(20)),
+                gradient: LinearGradient(
+                    colors: [Colors.red,Colors.blue],
+                    begin: Alignment.bottomCenter,
+                    end: Alignment.topCenter
+                )
+            ),
+          ),
+        ),
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Padding(
             padding: const EdgeInsets.all(8.0),
@@ -60,10 +67,11 @@ class _ForgotState extends State<Forgot> {
                   hintText: 'Enter your Name',
                   icon: Icon(
                     Icons.account_box_outlined,
-                    size: 30,color: Colors.indigoAccent,
+                    size: 30,color: Color(0xFF000000),
                   )),
             ),
           ),
+          SizedBox(height: 15,width: 15,),
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: TextField(
@@ -74,10 +82,11 @@ class _ForgotState extends State<Forgot> {
                   hintText: 'Enter your New Pass',
                   icon: Icon(
                     Icons.account_box_outlined,
-                    size: 30,color: Colors.indigoAccent,
+                    size: 30,color: Color(0xFF000000),
                   )),
             ),
           ),
+          SizedBox(height: 15,width: 15,),
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: TextField(
@@ -88,16 +97,17 @@ class _ForgotState extends State<Forgot> {
                   hintText: 'Enter your Confirm Pass',
                   icon: Icon(
                     Icons.account_box_outlined,
-                    size: 30,color: Colors.indigoAccent,
+                    size: 30,color: Color(0xFF000000),
                   )),
             ),
           ),
+          SizedBox(height: 15,width: 15,),
           Container(
             height: 50,
             width: 200,
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20),
-                color: Color(0xFF2443DF)),
+                color: Colors.red),
             child: TextButton(
                 onPressed: () {
 
@@ -132,8 +142,8 @@ class _ForgotState extends State<Forgot> {
             ),
           ),
 
-          Text("User Name:$user_name"),
-          Text('Password :$pass'),
+          //Text("User Name:$user_name"),
+          //Text('Password :$pass'),
 
         ],
       ),
